@@ -1,4 +1,5 @@
 <?php
+header("Referrer-Policy: no-referrer-when-downgrade");//localhost testing
 header("Access-Control-Allow-Origin: same-origin-allow-popups");
 header("Access-Control-Allow-Headers: HASH, Content-Type");
 header("Access-Control-Allow-Methods: POST");
@@ -11,7 +12,7 @@ header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Francis Kahindi" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none';form-action 'self'; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/ https://connect.facebook.net/; img-src 'self'; font-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://accounts.google.com/gsi/client https://connect.facebook.net; frame-src https://accounts.google.com/gsi/ https://web.facebook.com/  https://www.facebook.com;  connect-src 'self' https://accounts.google.com/gsi/ https://web.facebook.com https://www.facebook.com;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none';form-action 'self'; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/ https://connect.facebook.net/ https://cdnjs.cloudflare.com/; img-src 'self'; font-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://accounts.google.com/gsi/client https://connect.facebook.net https://cdnjs.cloudflare.com/; frame-src https://accounts.google.com/gsi/ https://web.facebook.com/  https://www.facebook.com;  connect-src 'self' https://accounts.google.com/gsi/ https://web.facebook.com https://www.facebook.com;" />
 
     <link rel="canonical" href="">
     <title>Login</title>
